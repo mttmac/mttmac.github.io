@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  background-color: #f8f0e3;
+  background-color: #fff;
   font-family: 'Lora', serif;
   font-size: medium;
   text-align: center;
@@ -61,15 +61,15 @@ p {
 }
 
 a {
-  color: #00a;
+  color: #3d5a80;
 }
 
 a:hover {
-  color: #00a;
+  color: #293241;
 }
 
 a:visited {
-  color: #00a;
+  color: #98c1d9;
 }
 
 table {
@@ -121,7 +121,13 @@ Dark Blue, Blue, Teal, Orange, Black
 */
 .site .content h1.subtitle {
   color: #ee6c4d;
-  font-size: 4;
+  font-size: 3;
+}
+
+.site .content h1.subsubtitle {
+  color: #ee6c4d;
+  font-size: 2;
+  font-style: italic;
 }
 
 .site {
