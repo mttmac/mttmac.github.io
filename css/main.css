@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  background-color: #fff;
+  background-color: #f8f0e3;
   font-family: 'Lora', serif;
   font-size: medium;
   text-align: center;
@@ -114,6 +114,16 @@ ul.posts span {
 /*
 /*****************************************************************************/
 
+/*
+Colour Palette
+Hex Codes: #3d5a80 // #98c1d9 // #e0fbfc // #ee6c4d //#293241
+Dark Blue, Blue, Teal, Orange, Black
+*/
+.site .content h1.subtitle {
+  color: #ee6c4d;
+  font-size: 4;
+}
+
 .site {
   font-size: 100%;
   text-align: justify;
@@ -133,12 +143,6 @@ ul.posts span {
   display: inline-block;
   margin-bottom: 2em;
 }
-
-/*
-Colour Palette
-Hex Codes: #3d5a80 // #98c1d9 // #e0fbfc // #ee6c4d //#293241
-Dark Blue, Blue, Teal, Orange, Black
-*/
 
 .site .header h1.title a {
   color: #ee6c4d;
