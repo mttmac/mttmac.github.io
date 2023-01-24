@@ -134,12 +134,18 @@ ul.posts span {
   margin-bottom: 2em;
 }
 
+/*
+Colour Palette
+Hex Codes: #3d5a80 // #98c1d9 // #e0fbfc // #ee6c4d //#293241
+Dark Blue, Blue, Teal, Orange, Black
+*/
+
 .site .header h1.title a {
-  color: #07D;
+  color: #ee6c4d;
 }
 
 .site .header h1.title a:hover {
-  color: #000;
+  color: #293241;
 }
 
 .site .header a.extra {
