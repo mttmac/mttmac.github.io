@@ -3,7 +3,7 @@ layout: default
 title: Matt MacDonald | Projects
 ---
 <div class="content">
-  <h1 class="subtitle">Open Source Projects</h1>
+  <h2 class="title">Open Source Projects</h2>
   These are some notable side projects I've undertaken with open source code repositories.
   <br>
   <hr>
@@ -12,17 +12,42 @@ title: Matt MacDonald | Projects
     <br>
     <li><b><a href="https://github.com/mttmac/glance">Glance - Anomaly Detection on Industrial Sensor Data</a></b>
       <br>
-      This project ...
+      Back in 2019 I participated in the Insight Data Science Fellowship. It was a great experience for me to focus on
+      machine learning for a couple months and really hone my skills. The cornerstone of the fellowship was a data
+      science project of my choosing, with the only requirements being that it covered the whole process from data
+      collection to ML modeling to cloud deployment and that it had actual business value. For my own requirements, I
+      really wanted to do something with cutting edge neural networks and I wanted to focus on an industrial use-case,
+      as opposed to many of the web service based projects others were tackling (e.g. AirBnB predictions).
+      <br>
+      What I created is a tool for anomaly detection on time-series industrial sensor data. It works by using a
+      variational auto-encoder architecture trained on normal operating data for the use-case, like the kind that may be
+      collected during equipment commissioning. The trained model is then dismantled and the center parameters at the
+      lowest dimensionality are used as a statistical distribution for normal operation. This works because the network
+      is forced to learn a meaningful latent space representation for the sensor data. Anything that fell too far
+      outside that distribution would then be flagged as an anomaly. In practice using a <a
+        href="https://ieeexplore.ieee.org/document/7151267">previously published dataset for a hydraulic system</a> I
+      was able to achieve a better F1 classification score than any other method. The final model was an excellent fit
+      for the business case because it did not require actual failure data, normal operating data was enough. I digested
+      this work into a handful of <a href="/assets/insight_demo_slides.pdf">high level slides</a> for demonstration.
+      <br>
+      To my knowledge this approach was novel, although it was inspired by a <a
+        href="https://arxiv.org/pdf/1807.01349.pdf">paper</a> that used a VAE model to detect anomalies in skin cancer
+      images. That paper used the recreation error of the VAE model as a metric for anomaly detection but provided
+      mediocre results (below 60% F1) for my problem. I kept the CNN layers because I saw good results using them over
+      RNN layers but I modified them to work on 1-dimensional time-series sensor data. The data was grouped by cycle
+      time and multiple sensors on the equipment became multiple channels in this representation. The most novel aspect
+      of my approach was to use the latent space of the VAE in a follow on clustering anomaly detection model. This
+      insight was what took this approach from a mediocre performance to over 87% in terms of F1 classification score.
     </li>
     <br>
     <li><b><a href="https://github.com/mttmac/submatter">Submatter - Head Tracking with Computer Vision </a></b>
       <br>
-      This project ...
+      ...
     </li>
     <br>
     <li><b><a href="https://github.com/mttmac/crush-rig">Crush Rig - Tissue Sample Data Collection</a></b>
       <br>
-      This project ...
+      ...
     </li>
 
 </div>

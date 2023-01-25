@@ -69,7 +69,7 @@ a:hover {
 }
 
 a:visited {
-  color: #98c1d9;
+  color: #3d5a80;
 }
 
 table {
@@ -119,14 +119,16 @@ Colour Palette
 Hex Codes: #3d5a80 // #98c1d9 // #e0fbfc // #ee6c4d //#293241
 Dark Blue, Blue, Teal, Orange, Black
 */
-.site .content h1.subtitle {
+.site .content h1.title {
   color: #ee6c4d;
-  font-size: 3;
 }
 
-.site .content h1.subsubtitle {
+.site .content h2.title {
   color: #ee6c4d;
-  font-size: 2;
+}
+
+.site .content h3.title {
+  color: #ee6c4d;
   font-style: italic;
 }
 
